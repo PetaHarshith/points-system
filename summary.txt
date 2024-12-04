@@ -1,0 +1,47 @@
+Question 1 - Why did you choose the tools, libraries, and language you used for the coding exercise?
+
+Answer 1 - I chose Flask, Python, and MongoDB because they are ideal for building efficient, scalable 
+APIs with minimal complexity. Flask’s simplicity allows quick development of clean, maintainable endpoints
+using decorators like @app.route. Python’s versatility enables concise handling of logic, such as validating
+ISO 8601 timestamps with the datetime module, ensuring accurate transaction processing. MongoDB’s schema-less
+design excels at storing dynamic JSON-like data structures, making it easy to handle transactions without 
+predefined schema constraints. These tools ensure seamless integration and a flexible, scalable backend, 
+perfect for the exercise’s requirements. My prior experience using these tools in a Collaborative Document 
+Editing Platform helped me implement this solution with confidence.
+
+
+Question 2 - what are the advantages and disadvantages of your solution?
+
+Answer 2 - The solution is efficient and simple to understand. It leverages Flask for a lightweight and clean API 
+design with RESTful routes for adding, spending, and retrieving points. Transactions are processed by timestamp 
+to ensure accuracy, spending the oldest points first. MongoDB’s schema-less design allows for flexibility in storing 
+dynamic transaction data, making it well-suited for potential future features like multi-user support. Bulk writes are
+usedfor updating transactions, thereby enhancing performance and reducing database overhead during operations involving
+multiple records. Built-in safeguards,such as preventing negative payer balances, ensure data integrity, while robust 
+input validation and error handling enhance reliability and debugging. The modular structure enables easy extensibility, 
+allowing features like user authentication or transaction history to be integrated easily.
+
+That said, the solution could face performance bottlenecks with large datasets due to the reliance on iterating over sorted 
+transactions. While functional for single-user use, adapting it to handle multiple users would require significant changes. 
+MongoDB’s schema-less nature also requires careful validation to prevent data inconsistencies. Additionally, the lack of 
+concurrency control means simultaneous requests for adding or spending points might lead to race conditions. Despite these 
+challenges, the solution is designed to be scalable, and these limitations can be addressed with optimized algorithms and 
+additional safeguards as needed.
+
+
+
+Question 3 - What has been a favorite school/personal project thus far? What about it that challenged you?
+
+Answer 3 - One of my favorite projects was the Collaborative Document Editing Platform, a web application enabling real-time 
+collaboration. It featured WebSocket-based synchronization, NLP-powered grammar and spell checking, and secure JWT authentication 
+over HTTPS. MongoDB was used for scalable document storage with high availability and quick retrieval. The platform aimed to enhance 
+team productivity by providing a smooth and secure environment for shared document editing.
+
+A major challenge was implementing a reliable autosave feature for real-time edits to prevent data loss during unexpected disconnections 
+or crashes. Balancing performance and reliability was really important, as frequent database writes could slow down the application, especially 
+under high traffic. To solve this, I implemented a debouncing mechanism, batching frequent changes within a timeframe before saving them 
+to the database. This approach optimized performance without sacrificing reliability.
+
+Testing was equally challenging, requiring simulations of failure scenarios like sudden user disconnections or server crashes to ensure edits 
+were consistently preserved. Addressing these complexities improved my ability to design robust, user-focused systems, making the project a 
+rewarding experience.

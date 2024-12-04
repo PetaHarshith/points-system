@@ -1,0 +1,93 @@
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment directories
+env/
+venv/
+ENV/
+.venv/
+.virtualenv/
+
+# Cache files
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Python test discovery
+.pytest_cache/
+.tox/
+.nox/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment variables and secrets
+.env
+.env.*
+.credentials
+
+# MongoDB dump files
+dump/
+*.bson
+*.json
+
+# Flask specific files
+instance/
+__pycache__/
+*.py[cod]
+
+# Coverage reports
+coverage.xml
+.coverage
+.cache
+nosetests.xml
+coverage/
+*.cover
+
+# Build artifacts
+build/
+dist/
+*.egg
+*.egg-info/
+.installed.cfg
+*.eggs
+
+# MyPy type check artifacts
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# PyCharm specific
+*.iml
+*.ipr
+*.iws
+
+# Byte-compiled C extensions
+*.so
