@@ -119,25 +119,25 @@ The application will be available at `http://127.0.0.1:8000/`.
         ```
 
 ---
+### Database Inspection
+To inspect the database and verify stored transactions, you can use **MongoDB Compass**:
 
-To inspect the database and verify stored transactions, you can use MongoDB Compass:
+1. **Download and Install MongoDB Compass**:
+   - [Download MongoDB Compass](https://www.mongodb.com/try/download/compass).
 
-Download and Install MongoDB Compass:
+2. **Connect to MongoDB**:
+   - Open MongoDB Compass and connect to the local database using the connection string:  
+     ```
+     mongodb://localhost:27017/
+     ```
 
-Download MongoDB Compass.
-Connect to MongoDB:
+3. **Navigate to the Database**:
+   - Select the `points_system` database and the `transactions` collection to view, update, or delete data manually.
 
-Open MongoDB Compass and connect to the local database using the connection string:
-arduino
-Copy code
-mongodb://localhost:27017/
-Navigate to the Database:
+4. **Verify Data**:
+   - Check that transactions are added correctly when you test the `/add` endpoint.
+   - Confirm that points are deducted as expected when testing the `/spend` endpoint.
 
-Select the points_system database and the transactions collection to view, update, or delete data manually.
-Verify Data:
-
-Check that transactions are added correctly when you test the /add endpoint.
-Confirm that points are deducted as expected when testing the /spend endpoint.
 Using MongoDB Compass makes it easier to debug and understand how the API interacts with the database.
 ---
 
