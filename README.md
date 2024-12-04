@@ -167,6 +167,7 @@ Using MongoDB Compass makes it easier to debug and understand how the API intera
 ---
 
 #### Example Workflow
+Note: Make sure the database is empty ensuring accurate results.
 
 #### **Add Transactions**
 
@@ -196,8 +197,6 @@ curl -X POST http://localhost:8000/add \
 
 Run curl commands for various scenarios to test the `/spend` endpoint:
 
-Make sure the database is empty.
-
 1. **Spend 5000 Points**:
 
     ```bash
@@ -222,7 +221,7 @@ Make sure the database is empty.
     -d '{"points": 100}'
     ```
 
-4. **Spend All Available Points (10500 Points)**:
+4. **Spend more number of points than available (10500 points)**:
 
     ```bash
     curl -X POST http://localhost:8000/spend \
